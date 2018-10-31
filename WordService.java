@@ -6,7 +6,7 @@ import com.example.demo.Word;
  
 public interface WordService {
      
-    //Word findById(long id);
+    Word findById(long id);
      
     Word findByName(String name);
      
@@ -19,8 +19,6 @@ public interface WordService {
     List<Word> findAllWords();
     
     List<Word> findAllPalindromes();
-     
-    //void deleteAllUsers();
      
     boolean isWordExist(Word word);
      

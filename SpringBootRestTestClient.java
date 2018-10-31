@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
  
 public class SpringBootRestTestClient {
   
-    public static final String REST_SERVICE_URI = "http://localhost:8080/SpringBootRestApi/api";
+    public static final String REST_SERVICE_URI = "http://localhost:8080/DemoApplication/api";
       
     /* GET */
     @SuppressWarnings("unchecked")
@@ -82,14 +82,6 @@ public class SpringBootRestTestClient {
         restTemplate.delete(REST_SERVICE_URI+"/word/3");
     }
   
-  
-    /* DELETE */
-   /* private static void deleteAllWords() {
-        System.out.println("Testing all delete Users API----------");
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.delete(REST_SERVICE_URI+"/word/");
-    }*/
-  
     public static void main(String args[]){
         listAllWords();
         getWord();
@@ -99,7 +91,6 @@ public class SpringBootRestTestClient {
         listAllWords();
         deleteWord();
         listAllWords();
-        //deleteAllWords();
         listAllPalindromes();
         listAllWords();
     }

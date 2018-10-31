@@ -40,14 +40,14 @@ public class WordServiceImpl implements WordService{
     	return words3;
     }
      
-    /*public User findById(long id) {
-        for(User user : users){
-         if(user.getId() == id){
-                return user;
+    public Word findById(long id) {
+        for(Word word : words){
+         if(word.getId() == id){
+                return word;
             }
         }
         return null;
-    }*/
+    }
      
     public Word findByName(String name) {
         for(Word word : words){
@@ -80,12 +80,8 @@ public class WordServiceImpl implements WordService{
     public boolean isWordExist(Word word) {
         return findByName(word.getName())!=null;
     }
-     
-    //public void deleteAllUsers(){
-    //    users.clear();
-   // }
  
-    private static List<Word> populateDummyUsers(){
+    private static List<Word> populateDummyWords(){
         List<Word> words = new ArrayList<Word>();
         words.add(new Word(counter.incrementAndGet(),"Sam"));
         words.add(new Word(counter.incrementAndGet(),"Tom"));

@@ -99,8 +99,6 @@ public class RestApiController {
         }
  
         currentWord.setWord(word.getWord());
-        //currentUser.setAge(user.getAge());
-        //currentUser.setSalary(user.getSalary());
  
         wordService.updateWord(currentWord);
         return new ResponseEntity<Word>(currentWord, HttpStatus.OK);
